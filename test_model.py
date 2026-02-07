@@ -2,16 +2,12 @@ from model.model import Model
 
 model = Model()
 
-for item in model.years:
-    print(item)
+model.get_team(1985)
+model.handle_grafo()
+a = model.handle_dettagli(1942)
+print(a)
 
-model.get_teams(2015)
+b, c = model.ricerca_percorso(1942)
 
-for teams in model.teams:
-    print(teams)
-
-model.crea_grafo()
-righe = model.get_dettagli("ATL (Atlanta Braves)")
-
-for riga in righe:
-    print(riga)
+print(b)
+print(c)
